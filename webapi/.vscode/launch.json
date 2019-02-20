@@ -5,11 +5,27 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Flask",
+            "name": "Run (development)",
             "type": "python",
             "request": "launch",
             "module": "flask",
             "env": {
+                "FLASK_ENV": "development",
+                "FLASK_APP": "app.py"
+            },
+            "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ]
+        },
+        {
+            "name": "Run (production)",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_ENV": "production",
                 "FLASK_APP": "app.py"
             },
             "args": [
